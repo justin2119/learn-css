@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COURS CSS</title>
+</head>
+<style>
+    body{
+        background: url(bg.png) center/cover;
+        min-height: 100vh;
+    }
+    h1{
+        text-align: center;
+        text-shadow: 0px -1px 4px #1a40ac;
+    }
+    main{
+        min-height: 500px;
+        width: 90%;
+        background: rgb(255, 253, 253);
+        margin: 0 auto;
+        border: 2px solid blueviolet;
+        border-radius: 20px 20px 0 0;
+        box-shadow: -3px -7px 18px 8px rgb(23, 13, 134);
+        padding: 30px;
+    }
+    h2{
+        margin: 0;
+    }
+    
+    .flexbox, .grid{
+        border: 2px solid blueviolet;
+        border-radius: 10px;
+        padding: 10px;
+        margin-top:20px;
+    }
+    .flexbox ul{
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+    }
+     /* Repartion des elements */
+    .flexbox li{
+        list-style: none;
+        height: 160px;
+        width: 160px;
+        margin: 10px;
+        background: rgba(35, 5, 207, 0.716);
+        border-radius: 10px;
+        /* cntre un unique element de la boite V et H*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .flexbox li:hover{
+        background: rgba(35, 5, 207, 0.716);
+        box-shadow: 0px 0px 10px 5px rgb(23, 13, 134);
+        transition: all 0.3s ease-in-out;
+    }
+    /* GRID */
+    .grid-container{
+        display: grid;
+        grid-template-columns:30% 70%
+    }
+    .grid img{
+        width: 80%;
+        height: 80px;
+        border-radius: 10px;
+    }
+</style>
+<body>
+    <header>
+    <h1>LES BASE DE CSS</h1>
+    </header>
+    <main>
+      <div class="flexbox">
+        <h2>Flexbox</h2>
+        <ul>
+            <li>boite1</li>
+            <li>boite2</li>
+            <li>boite3</li>
+        </ul>
+      </div>
+      <div class="grid">
+        <h2>Grid</h2>
+        <div class="grid-container">
+            <img src="css-logo.png" alt="logo css" width="200px" height="200px">
+            <form action="">
+                <input type="text"  id="Nom" placeholder="Nom" required>
+                <input type="text" id="Prenom" placeholder="Prenom" required>
+                <textarea cols="30" rows="10" id="texte" placeholder="Ici votre messsage"></textarea>
+                <input type="submit" value="Envoyer">
+            </form>
+        </div>
+      </div>
+    </main>
+</body>
+</html>

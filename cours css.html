@@ -67,6 +67,33 @@
         height: 80px;
         border-radius: 10px;
     }
+    form{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+            "Nom Prenom"
+            "texte texte"
+            "submit submit";
+    }
+    input,textarea{
+        margin: 5px;
+        border: 1px solid blueviolet;
+        border-radius: 10px;
+    } 
+    textarea{
+        grid-area: texte;
+        height: 40px;
+        resize: none;
+    }
+    #validation{
+        grid-area: submit;
+        cursor: pointer;
+    }
+    #validation:hover{
+        background-color: #2b27b8ab;
+        transition: 5s;
+    } 
 </style>
 <body>
     <header>
@@ -89,7 +116,7 @@
                 <input type="text"  id="Nom" placeholder="Nom" required>
                 <input type="text" id="Prenom" placeholder="Prenom" required>
                 <textarea cols="30" rows="10" id="texte" placeholder="Ici votre messsage"></textarea>
-                <input type="submit" value="Envoyer">
+                <input id="validation"  type="submit" value="Envoyer">
             </form>
         </div>
       </div>
